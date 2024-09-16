@@ -5,6 +5,7 @@ pipeline {
         
         gradle 'Gradle3'
         maven "M3"
+        jdk "OpenJDK-17"
     }
 
     stages {
