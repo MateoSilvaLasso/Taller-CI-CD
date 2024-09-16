@@ -4,6 +4,7 @@ pipeline {
     tools {
         
         gradle 'Gradle3'
+        maven "M3"
     }
 
     stages {
@@ -19,7 +20,7 @@ pipeline {
             agent { label 'node1' } 
             steps {
                 // Ejecutar Gradle para compilar y ejecutar pruebas unitarias
-                sh "./gradlew clean build"
+                sh "./mvnw -B package"
             }
             post {
                 // Almacenar los resultados de las pruebas unitarias
