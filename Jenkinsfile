@@ -20,7 +20,7 @@ pipeline {
             agent { label 'node1' } 
             steps {
                 // Ejecutar Gradle para compilar y ejecutar pruebas unitarias
-                sh "./mvnw -B package"
+                sh "mvn test"
             }
             post {
                 // Almacenar los resultados de las pruebas unitarias
